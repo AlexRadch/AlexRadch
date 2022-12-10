@@ -1,11 +1,9 @@
-# Hi everyone 👋, I'm Alexander Radchenko
-I'm a freelancer and software developer 👨‍💻.
-
+# Hi everyone 👋, I'm Alexander Radchenko, a freelancer 🏠 and software developer 👨‍💻
 ![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/AlexRadch?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/AlexRadc?style=social)
 
-I'm creating software engineering tips and tricks 💭 video on my [YouTube channel](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA) ![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social). If you are interested in everything related to .NET, check out 👀 my videos!
+I'm creating software engineering tips and tricks 💭 videos on my [YouTube channel](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA). If you are interested in everything related to .NET, check out 👀 my videos!
 
 Don't forget to comment, like, and subscribe 🤝!
 
