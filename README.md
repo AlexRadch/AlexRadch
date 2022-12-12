@@ -1,10 +1,10 @@
 # Hi 👋, I'm Alexander Radchenko
-![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)
-![GitHub followers](https://img.shields.io/github/followers/AlexRadch?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/AlexRadc?style=social)
-![Codewars achievements](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)
+[![YouTube](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA)
+[![GitHub](https://img.shields.io/github/followers/AlexRadch?style=social)](https://github.com/AlexRadch)
+[![Twitter](https://img.shields.io/twitter/follow/AlexRadc?style=social)](https://twitter.com/AlexRadc)
+[![Codewars](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)](https://www.codewars.com/users/AlexRadch)
 
-## I'm software engineer 👨‍💻, freelancer 🏠 and video blogger ▶️
+## I'm software engineer 👨‍💻, freelancer 🏠 and video blogger :video_camera:
 I'm creating **software engineering tips and tricks videos** 💡 on my [YouTube channel ▶️](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA). If you are interested in everything related to **.NET**, check out 👀 my videos! Don't forget to comment 💬, like 👍, and subscribe 🔔!
 
 <!---
