@@ -4,8 +4,8 @@
 [![Twitter](https://img.shields.io/twitter/follow/AlexRadc?style=social)](https://twitter.com/AlexRadc)
 [![Codewars](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)](https://www.codewars.com/users/AlexRadch)
 
-## I'm software engineer 👨‍💻, freelancer 🏠 and video blogger :video_camera:
-I'm creating **software engineering tips and tricks videos** 💡 on my [YouTube channel ▶️](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA). If you are interested in everything related to **.NET**, check out 👀 my videos! Don't forget to comment 💬, like 👍, and subscribe 🔔!
+## I'm software engineer, freelancer and tips and tricks blogger
+I'm creating **software engineering tips and tricks videos** on my [DrNet channel](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA). If you are interested in everything related to **.NET**, check out 👀 my videos! Don't forget to comment 💬, like 👍, and subscribe 🔔!
 
 <!---
 Become my sponsor 🤑 and you will **get access to the source code** 🎯 of all my videos. You will also have access to my **community Discord server** where you can discuss 💬 related topics with me and other community members.
@@ -14,7 +14,4 @@ Become my sponsor 🤑 and you will **get access to the source code** 🎯 of al
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on [DrNet .NET libraries](https://github.com/AlexRadch/DrNet), [HyperLoop](https://github.com/AlexRadch/HyperLoop) and other [.Net projects](https://github.com/dotnet).
 - 📫 How to reach me ...
-
-lexRadch/AlexRadch is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
 --->
