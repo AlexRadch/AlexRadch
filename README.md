@@ -4,7 +4,7 @@
 [![Twitter](https://img.shields.io/twitter/follow/AlexRadc?style=social)](https://twitter.com/AlexRadc)
 [![Codewars](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)](https://www.codewars.com/users/AlexRadch)
 
-## I'm software engineer, freelancer and tips and tricks blogger
+## I'm a software engineer, freelancer, and video blogger
 I'm creating **software engineering tips and tricks videos** on my [DrNet channel](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA). If you are interested in everything related to **.NET**, check out 👀 my videos! Don't forget to comment 💬, like 👍, and subscribe 🔔!
 
 <!---
