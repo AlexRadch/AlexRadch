@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   base: '/AlexRadch/',
@@ -16,7 +17,7 @@ export default defineUserConfig({
         link: '/ForTheBeloved/',
         children: [
           '/ForTheBeloved/',
-          '/ForTheBeloved/HappyNewYear.md'
+          '/ForTheBeloved/HappyNewYear/'
         ],
       }
     ],
@@ -26,7 +27,7 @@ export default defineUserConfig({
           text: 'Привет 👋, Любимая 💕',
           link: '/ForTheBeloved/',
           children: [
-            '/ForTheBeloved/HappyNewYear.md'
+            '/ForTheBeloved/HappyNewYear/'
           ]
         }
       ]
@@ -41,4 +42,12 @@ export default defineUserConfig({
     //   }
     // ]
   }),
+
+  plugins: [
+    registerComponentsPlugin({
+      components: {
+        LottieAnimation: 'lottie-web-vue'
+      }
+    })
+  ]
 })

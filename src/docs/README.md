@@ -1,3 +1,6 @@
+---
+lang: ru-RU
+---
 # Hi 👋, I'm Alexander Radchenko
 [![YouTube](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA)
 [![GitHub](https://img.shields.io/github/followers/AlexRadch?style=social)](https://github.com/AlexRadch)
