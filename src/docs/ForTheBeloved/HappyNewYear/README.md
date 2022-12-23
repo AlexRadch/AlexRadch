@@ -6,7 +6,13 @@ title: ✨ Поздравляю с Новым Годом 🌠🎁
 <Badge text="demo" />
 
 <LottieAnimation
-    :animationData="'https://assets9.lottiefiles.com/packages/lf20_3JQWlpZxIn.json'"
+    animationData="https://assets9.lottiefiles.com/packages/lf20_3JQWlpZxIn.json"
     :loop="true"
     :autoPlay="true"
+/>
+
+<lottie-animation
+    animationData="https://assets9.lottiefiles.com/packages/lf20_3JQWlpZxIn.json"
+    loop="true"
+    autoPlay="true"
 />
