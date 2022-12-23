@@ -1,38 +1,15 @@
 {
-  "name": "alex-rad",
+  "name": "alexradch",
   "version": "1.0.0",
-  "private": true,
-  "description": "alex-rad",
-  "author": "Alexander Radchenko",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "AlexRadch GitHub site",
+  "main": "index.js",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "docs:dev": "vuepress dev src/docs",
+    "docs:build": "vuepress build src/docs"
   },
-  "dependencies": {
-    "@mdx-js/react": "^2.2.1",
-    "gatsby": "^5.3.3",
-    "gatsby-plugin-google-gtag": "^5.3.0",
-    "gatsby-plugin-image": "^3.3.2",
-    "gatsby-plugin-manifest": "^5.3.1",
-    "gatsby-plugin-mdx": "^5.3.1",
-    "gatsby-plugin-sharp": "^5.3.2",
-    "gatsby-plugin-sitemap": "^6.3.1",
-    "gatsby-source-filesystem": "^5.3.1",
-    "gatsby-transformer-sharp": "^5.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "author": "Alexander Radchenko",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.11.10",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "typescript": "^4.9.3"
+    "vuepress": "^2.0.0-beta.59"
   }
 }
