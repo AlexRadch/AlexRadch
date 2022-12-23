@@ -2,11 +2,12 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
+  base: '/AlexRadch/',
+  dest: 'docs',
+
   lang: 'en-US',
   title: 'Alexander Radchenko GitHub site',
   description: 'Just playing around',
-
-  dest: '\docs',
 
   theme: defaultTheme({
     navbar: [
