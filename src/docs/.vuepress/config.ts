@@ -6,6 +6,8 @@ export default defineUserConfig({
   title: 'Alexander Radchenko GitHub site',
   description: 'Just playing around',
 
+  dest: '\docs',
+
   theme: defaultTheme({
     navbar: [
       {
@@ -17,14 +19,25 @@ export default defineUserConfig({
         ],
       }
     ],
-    sidebar: [
-      {
-        text: 'Привет 👋, Любимая 💕',
-        link: '/ForTheBeloved/',
-        children: [
-          '/ForTheBeloved/HappyNewYear.md'
-        ]
-      }
-    ]
+    sidebar: {
+      '/ForTheBeloved/': [
+        {
+          text: 'Привет 👋, Любимая 💕',
+          link: '/ForTheBeloved/',
+          children: [
+            '/ForTheBeloved/HappyNewYear.md'
+          ]
+        }
+      ]
+    }
+    // [
+    //   {
+    //     text: 'Привет 👋, Любимая 💕',
+    //     link: '/ForTheBeloved/',
+    //     children: [
+    //       '/ForTheBeloved/HappyNewYear.md'
+    //     ]
+    //   }
+    // ]
   }),
 })
