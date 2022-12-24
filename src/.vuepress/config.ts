@@ -9,8 +9,18 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'Alexander Radchenko GitHub site',
   description: 'Just playing around',
+  
+  locales: {
+    // '/ForTheBeloved/': {
+    //   lang: 'ru-RU',
+    // },
+  },
 
   theme: defaultTheme({
+    repo: 'AlexRadch/AlexRadch',
+    //repoLabel: 'GitHub',
+    docsDir: 'src',
+
     navbar: [
       {
         text: 'Любимой 💕',
@@ -46,7 +56,8 @@ export default defineUserConfig({
   plugins: [
     registerComponentsPlugin({
       components: {
-        LottieAnimation: 'lottie-web-vue'
+        //LottieAnimation: 'lottie-web-vue',
+        Vue3Lottie: 'vue3-lottie',
       }
     })
   ]
