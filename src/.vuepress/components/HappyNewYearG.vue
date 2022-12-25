@@ -4,7 +4,20 @@
       overflow: hidden;
       background-color: lightblue;"
   >
-  <Vue3Lottie ref="FirePlace" :animationData="FirePlace_Json" style="position: absolute;
+    <Vue3Lottie ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" style="position: absolute;
+        width: 100%; left: 0%; top: 0%; "
+      :speed="0.2"
+      v-show="!BellOfHappiness_playState"
+    />
+    <!-- <Vue3Lottie ref="Snow" :animationData="Snow_Json" style="position: absolute;
+        width: 125%; left: 0%; top: 0%; "
+      v-show="BellOfHappiness_playState"
+    /> -->
+    <Vue3Lottie ref="SnowFlakes" :animationData="SnowFlakes_Json" style="position: absolute;
+        width: 125%; left: 0%; top: 0%; "
+      v-show="BellOfHappiness_playState"
+    />
+    <Vue3Lottie ref="FirePlace" :animationData="FirePlace_Json" style="position: absolute;
         width: 40%; left: -3%; top: -10%; "
     />
     <Vue3Lottie ref="SantaSleigh" :animationData="SantaSleigh_Json" style="position: absolute;
@@ -38,6 +51,10 @@
     <Vue3Lottie ref="Lights" :animationData="Lights_Json" style="position: absolute;
         width: 50%; left: -2%; top: -30%; "
     />
+    <Vue3Lottie ref="MerryChristmas" :animationData="MerryChristmas_Json" style="position: absolute;
+        width: 60%; left: 40%; top: -30%; "
+      v-show="BellOfHappiness_playState"
+    />
     <Vue3Lottie ref="RabbitRunning" :animationData="RabbitRunning_Json" style="position: absolute;
         width: 30%; left: -6%; bottom: -10%; "
       v-show="BellOfHappiness_playState"
@@ -55,16 +72,20 @@
 import { Vue3Lottie } from 'vue3-lottie'
 //import 'vue3-lottie/dist/style.css'
 
-import SantaSleigh_Json from './HappyNewYear/lotties/128055-santa-sleigh.json'
+import HeartFlyPartical_Json from './HappyNewYear/lotties/43296-heart-fly-partical-transparent-bg-ver2.json'
+//import Snow_Json from './HappyNewYear/lotties/11113-snow.json'
+import SnowFlakes_Json from './HappyNewYear/lotties/130377-snowflakes.json'
 import FirePlace_Json from './HappyNewYear/lotties/129654-fire-place.json'
-import ChristmasTree_Json from './HappyNewYear/lotties/41812-christmas-tree.json'
-import AnimationSuccessBack_Json from './HappyNewYear/lotties/125505-animation-success-back.json'
-import CatLoader_Json from './HappyNewYear/lotties/76266-cat-loader.json'
+import SantaSleigh_Json from './HappyNewYear/lotties/128055-santa-sleigh.json'
 import RocketLaunches_Json from './HappyNewYear/lotties/131381-the-rocket-launches-with-the-adorable-orange.json'
-import RabbitRunning_Json from './HappyNewYear/lotties/106450-rabbit-running.json'
-import Lights_Json from './HappyNewYear/lotties/129650-lights.json'
 import WebDev_Json from './HappyNewYear/lotties/125754-web-dev.json'
 import DrawingWoman_Json from './HappyNewYear/lotties/101450-women-doing-painting.json'
+import ChristmasTree_Json from './HappyNewYear/lotties/41812-christmas-tree.json'
+import CatLoader_Json from './HappyNewYear/lotties/76266-cat-loader.json'
+import AnimationSuccessBack_Json from './HappyNewYear/lotties/125505-animation-success-back.json'
+import Lights_Json from './HappyNewYear/lotties/129650-lights.json'
+import MerryChristmas_Json from './HappyNewYear/lotties/88762-merry-christmas.json'
+import RabbitRunning_Json from './HappyNewYear/lotties/106450-rabbit-running.json'
 import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happiness.json'
 
 //import BingCrosby_JingleBells_mp3 from './HappyNewYear/sounds/Bing Crosby--Jingle Bells (1943).mp3'
@@ -76,20 +97,24 @@ audio.loop = true;
 export default {
   name: 'HappyNewYearG',
   components: {
-    Vue3Lottie
+    Vue3Lottie,
   },
   data() {
     return {
-      SantaSleigh_Json,
+      HeartFlyPartical_Json,
+      //Snow_Json,
+      SnowFlakes_Json,
       FirePlace_Json,
-      ChristmasTree_Json,
-      AnimationSuccessBack_Json,
-      CatLoader_Json,
+      SantaSleigh_Json,
       RocketLaunches_Json,
-      RabbitRunning_Json,
-      Lights_Json,
       WebDev_Json,
       DrawingWoman_Json,
+      ChristmasTree_Json,
+      CatLoader_Json,
+      AnimationSuccessBack_Json,
+      Lights_Json,
+      MerryChristmas_Json,
+      RabbitRunning_Json,
       BellOfHappiness_Json,
 
       BellOfHappiness_playState: false,
