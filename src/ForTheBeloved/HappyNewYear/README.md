@@ -9,6 +9,7 @@ title: ✨ Поздравляю с Новым Годом 🌠🎁
 
 <!-- {{ url }} -->
 
+<!-- <LottieWebVueExample /> -->
 <!-- <Vue3LottieExample /> -->
 <HappyNewYearG />
 

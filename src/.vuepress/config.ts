@@ -60,8 +60,8 @@ export default defineUserConfig({
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components/'),
       components: {
-        //LottieAnimation: 'lottie-web-vue',
-        '{ Vue3Lottie }': 'vue3-lottie',
+        LottieAnimation: 'lottie-web-vue',
+        Vue3Lottie: 'vue3-lottie',
       }
     })
   ],
