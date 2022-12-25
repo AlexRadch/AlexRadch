@@ -61,7 +61,7 @@ export default defineUserConfig({
       componentsDir: path.resolve(__dirname, './components/'),
       components: {
         //LottieAnimation: 'lottie-web-vue',
-        Vue3Lottie: 'vue3-lottie',
+        '{ Vue3Lottie }': 'vue3-lottie',
       }
     })
   ],

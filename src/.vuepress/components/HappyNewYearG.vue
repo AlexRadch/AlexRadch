@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { Vue3Lottie } from 'vue3-lottie'
+//import { Vue3Lottie } from 'vue3-lottie'
 //import 'vue3-lottie/dist/style.css'
 import ChristmasTree_Json from './HappyNewYear/lotties/41812-christmas-tree.json'
 import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happiness.json'
