@@ -4,13 +4,27 @@
       overflow: hidden; "
       :class="{ night : BellOfHappiness_playState,  day : !BellOfHappiness_playState, }"
   >
-    <!-- <Vue3Lottie ref="BellOfHappiness" :animationData="BellOfHappiness_Json" style="position: absolute;
-        width: 20%; top: -5%; right: -3%; "
-      :autoPlay="BellOfHappiness_playState"
-      :pauseAnimation="!BellOfHappiness_playState"
-      @click="bellOfHappiness_OnClick"
-    /> -->
-    <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json"  :loop="true" style="position: absolute;
+    <Transition>
+      <LottieAnimation ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" :loop="true" style="position: absolute;
+          width: 100%; left: 0%; top: 0%; "
+        :speed="0.2"
+        v-show="!BellOfHappiness_playState"
+      />    
+    </Transition>
+    <Transition>
+      <LottieAnimation ref="SnowFlakes" :animationData="SnowFlakes_Json" :loop="true" style="position: absolute;
+          width: 125%; left: 0%; top: 0%; "
+        v-show="BellOfHappiness_playState"
+      />
+    </Transition>
+
+    <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @after-leave="night_AfterLeave">
+      <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" :loop="true" style="position: absolute;
+          width: 30%; left: -6%; bottom: -10%; "
+        v-show="BellOfHappiness_playState"
+      />
+    </Transition>
+    <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json" :loop="true" style="position: absolute;
         width: 20%; top: -5%; right: -3%; "
       :autoPlay="BellOfHappiness_playState"
       @click="bellOfHappiness_OnClick"
@@ -44,52 +58,65 @@
 //import 'vue3-lottie/dist/style.css'
 import { LottieAnimation } from 'lottie-web-vue'
 
+import HeartFlyPartical_Json from './HappyNewYear/lotties/43296-heart-fly-partical-transparent-bg-ver2.json'
+//import Snow_Json from './HappyNewYear/lotties/11113-snow.json'
+import SnowFlakes_Json from './HappyNewYear/lotties/130377-snowflakes.json'
+import FirePlace_Json from './HappyNewYear/lotties/129654-fire-place.json'
+import SantaSleigh_Json from './HappyNewYear/lotties/128055-santa-sleigh.json'
+import RocketLaunches_Json from './HappyNewYear/lotties/131381-the-rocket-launches-with-the-adorable-orange.json'
+import WebDev_Json from './HappyNewYear/lotties/125754-web-dev.json'
+import DrawingWoman_Json from './HappyNewYear/lotties/101450-women-doing-painting.json'
+import ChristmasTree_Json from './HappyNewYear/lotties/41812-christmas-tree.json'
+import CatLoader_Json from './HappyNewYear/lotties/76266-cat-loader.json'
+import AnimationSuccessBack_Json from './HappyNewYear/lotties/125505-animation-success-back.json'
+import Lights_Json from './HappyNewYear/lotties/129650-lights.json'
+import MerryChristmas_Json from './HappyNewYear/lotties/88762-merry-christmas.json'
+import RabbitRunning_Json from './HappyNewYear/lotties/106450-rabbit-running.json'
 import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happiness.json'
 
 //import BingCrosby_JingleBells_mp3 from './HappyNewYear/sounds/Bing_Crosby--Jingle_Bells_(1943).mp3'
 import DiscoCrash_NewYear_mp3 from './HappyNewYear/sounds/Disco_Crash--New Year.mp3'
 
-var audio = new Audio(DiscoCrash_NewYear_mp3);
-audio.loop = true;
+var audio;
 
 export default {
-  name: 'LottieAnimationExample',
+  name: 'HappyNewYearG',
+
   components: {
     //Vue3Lottie,
     LottieAnimation,
   },
+
   data() {
     return {
+      HeartFlyPartical_Json,
+      //Snow_Json,
+      SnowFlakes_Json,
+      FirePlace_Json,
+      SantaSleigh_Json,
+      RocketLaunches_Json,
+      WebDev_Json,
+      DrawingWoman_Json,
+      ChristmasTree_Json,
+      CatLoader_Json,
+      AnimationSuccessBack_Json,
+      Lights_Json,
+      MerryChristmas_Json,
+      RabbitRunning_Json,
       BellOfHappiness_Json,
 
       BellOfHappiness_playState: false,
+      DayEntered: true,
+      NightEntered: false,
     }
   },
+  
   methods: {
     bellOfHappiness_OnClick() {
       this.BellOfHappiness_playState = !this.BellOfHappiness_playState;
-      if (this.BellOfHappiness_playState)
-      {
-        audio.play();
-
-        // var WebDev = this.$refs.WebDev;
-        // WebDev.pause();
-        // //WebDev.direction = 'reverse';
-        // WebDev.setDirection = 'reverse';
-        // WebDev.play();
-
-        this.$refs.BellOfHappiness.play();
-      }
-      else
-      {
-        audio.pause();
-
-        // var WebDev = this.$refs.WebDev;
-        // WebDev.play();
-
-        this.$refs.BellOfHappiness.pause();
-      }
+      this.stateChanged();
     },
+
     webDev_OnLoopComplete() {
       // if (this.BellOfHappiness_playState)
       // {
@@ -97,16 +124,72 @@ export default {
       //   WebDev.pause();
       //   WebDev.goToAndStop(0);
       // }
-    }
+    },
+
+    night_BeforeEnter() {
+      this.NightEntered = false;
+      this.DayEntered = false;
+      this.stateChanged();
+    },
+
+    night_AfterEnter() {
+      this.NightEntered = true;
+      this.stateChanged();
+    },
+    
+    night_BeforeLeave() {
+      this.NightEntered = false;
+      this.DayEntered = false;
+      this.stateChanged();
+    },
+
+    night_AfterLeave() {
+      this.DayEntered = true;
+      this.stateChanged();
+    },
+
+    stateChanged() {
+      if (this.BellOfHappiness_playState)
+      {
+        audio.play();
+        this.$refs.BellOfHappiness.play();
+      }
+      else
+      {
+        audio.pause();
+        this.$refs.BellOfHappiness.pause();
+      }
+
+      if (this.BellOfHappiness_playState && this.NightEntered)
+      {
+        this.$refs.HeartFlyPartical.pause();
+      }
+      else
+      {
+        this.$refs.HeartFlyPartical.play();
+      }
+
+      if (!this.BellOfHappiness_playState && this.DayEntered)
+      {
+        this.$refs.SnowFlakes.pause();
+      }
+      else
+      {
+        this.$refs.SnowFlakes.play();
+      }
+    },
   },
+
   mounted () {
-    if (this.BellOfHappiness_playState)
-    {
-      audio.play();
-    }
+    audio = new Audio(DiscoCrash_NewYear_mp3);
+    audio.loop = true;
+
+    this.stateChanged();
   },
+
   unmounted () {
     audio.pause();
+    audio = null;
   }
 }
 </script>

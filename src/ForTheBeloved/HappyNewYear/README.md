@@ -7,11 +7,19 @@ title: ✨ Поздравляю с Новым Годом 🌠🎁
     //import HappyNewYearC from './HappyNewYearC.vue'
 </script>
 
-<!-- {{ url }} -->
+<!-- <Vue3LottieExample /> -->
+<!-- <ClientOnly>
+    <Vue3LottieExample />
+</ClientOnly> -->
 
 <LottieAnimationExample />
-<!-- <Vue3LottieExample /> -->
-<!-- <HappyNewYearG /> -->
+<!-- <ClientOnly>
+    <LottieAnimationExample />
+</ClientOnly> -->
+
+<!-- <ClientOnly>
+    <HappyNewYearG />
+</ClientOnly> -->
 
 ::: tip Disclaimer
 All the lotties in this page are from [lottiefiles.com](https://lottiefiles.com/).
