@@ -35,6 +35,7 @@
       <LottieAnimation ref="WebDev" :animationData="WebDev_Json" :loop="true" style="position: absolute;
           width: 50%; left: 0%; bottom: 0%; "
         v-show="!BellOfHappiness_playState"
+        @loopComplete="webDev_LoopComplete"
       />
     </Transition>
     <Transition>
@@ -45,6 +46,7 @@
     </Transition>
     <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" :loop="true" style="position: absolute;
         width: 60%; right: -7%; bottom: -8%; "
+        @loopComplete="christmasTree_LoopComplete"
     />
     <Transition>
       <LottieAnimation ref="CatLoader" :animationData="CatLoader_Json" :loop="true" style="position: absolute;
@@ -127,6 +129,8 @@ import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happines
 import DiscoCrash_NewYear_mp3 from './HappyNewYear/sounds/Disco_Crash--New Year.mp3'
 
 var audio;
+var webDev_Direction = 1;
+var christmasTree_Direction = 1;
 
 export default {
   name: 'HappyNewYearG',
@@ -166,13 +170,26 @@ export default {
       this.stateChanged();
     },
 
-    webDev_OnLoopComplete() {
-      // if (this.BellOfHappiness_playState)
-      // {
-      //   var WebDev = this.$refs.WebDev;
-      //   WebDev.pause();
-      //   WebDev.goToAndStop(0);
-      // }
+    webDev_LoopComplete() {
+      webDev_Direction = -webDev_Direction;
+
+      this.$refs.WebDev.pause();
+      this.$refs.WebDev.setDirection(webDev_Direction);
+      if (webDev_Direction > 0)
+        this.$refs.WebDev.goToAndPlay(0, true);
+      else
+        this.$refs.WebDev.goToAndPlay(this.$refs.WebDev.getDuration(true), true);
+    },
+
+    christmasTree_LoopComplete() {
+      christmasTree_Direction = -christmasTree_Direction;
+
+      this.$refs.ChristmasTree.pause();
+      this.$refs.ChristmasTree.setDirection(christmasTree_Direction);
+      if (christmasTree_Direction > 0)
+        this.$refs.ChristmasTree.goToAndPlay(0, true);
+      else
+        this.$refs.ChristmasTree.goToAndPlay(this.$refs.ChristmasTree.getDuration(true), true);
     },
 
     night_BeforeEnter() {
