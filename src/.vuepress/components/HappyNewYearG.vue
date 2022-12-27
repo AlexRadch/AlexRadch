@@ -105,12 +105,9 @@
 </style>
 
 <script>
-//import { Vue3Lottie } from 'vue3-lottie'
-//import 'vue3-lottie/dist/style.css'
-import { LottieAnimation } from 'lottie-web-vue'
+// import { LottieAnimation } from 'lottie-web-vue'
 
 import HeartFlyPartical_Json from './HappyNewYear/lotties/43296-heart-fly-partical-transparent-bg-ver2.json'
-//import Snow_Json from './HappyNewYear/lotties/11113-snow.json'
 import SnowFlakes_Json from './HappyNewYear/lotties/130377-snowflakes.json'
 import FirePlace_Json from './HappyNewYear/lotties/129654-fire-place.json'
 import SantaSleigh_Json from './HappyNewYear/lotties/128055-santa-sleigh.json'
@@ -125,7 +122,6 @@ import MerryChristmas_Json from './HappyNewYear/lotties/88762-merry-christmas.js
 import RabbitRunning_Json from './HappyNewYear/lotties/106450-rabbit-running.json'
 import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happiness.json'
 
-//import BingCrosby_JingleBells_mp3 from './HappyNewYear/sounds/Bing_Crosby--Jingle_Bells_(1943).mp3'
 import DiscoCrash_NewYear_mp3 from './HappyNewYear/sounds/Disco_Crash--New Year.mp3'
 
 var audio;
@@ -135,15 +131,13 @@ var christmasTree_Direction = 1;
 export default {
   name: 'HappyNewYearG',
 
-  components: {
-    //Vue3Lottie,
-    LottieAnimation,
-  },
+  // components: {
+  //   //LottieAnimation,
+  // },
 
   data() {
     return {
       HeartFlyPartical_Json,
-      //Snow_Json,
       SnowFlakes_Json,
       FirePlace_Json,
       SantaSleigh_Json,
