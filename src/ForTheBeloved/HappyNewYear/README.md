@@ -12,14 +12,14 @@ title: ✨ Поздравляю с Новым Годом 🌠🎁
     <Vue3LottieExample />
 </ClientOnly> -->
 
-<LottieAnimationExample />
+<!-- <LottieAnimationExample /> -->
 <!-- <ClientOnly>
     <LottieAnimationExample />
 </ClientOnly> -->
 
-<!-- <ClientOnly>
+<ClientOnly>
     <HappyNewYearG />
-</ClientOnly> -->
+</ClientOnly>
 
 ::: tip Disclaimer
 All the lotties in this page are from [lottiefiles.com](https://lottiefiles.com/).

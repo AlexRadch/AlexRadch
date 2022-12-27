@@ -5,90 +5,81 @@
       :class="{ night : BellOfHappiness_playState,  day : !BellOfHappiness_playState, }"
   >
     <Transition>
-      <Vue3Lottie ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" style="position: absolute;
+      <LottieAnimation ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" :loop="true" style="position: absolute;
           width: 100%; left: 0%; top: 0%; "
         :speed="0.2"
         v-show="!BellOfHappiness_playState"
-        :pauseAnimation="BellOfHappiness_playState && NightEntered"
-      />
+      />    
     </Transition>
     <Transition>
-      <Vue3Lottie ref="SnowFlakes" :animationData="SnowFlakes_Json" style="position: absolute;
+      <LottieAnimation ref="SnowFlakes" :animationData="SnowFlakes_Json" :loop="true" style="position: absolute;
           width: 125%; left: 0%; top: 0%; "
         v-show="BellOfHappiness_playState"
-        :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
-    <Vue3Lottie ref="FirePlace" :animationData="FirePlace_Json" style="position: absolute;
+    <LottieAnimation ref="FirePlace" :animationData="FirePlace_Json" :loop="true" style="position: absolute;
         width: 40%; left: -3%; top: -10%; "
     />
-    <Vue3Lottie ref="SantaSleigh" :animationData="SantaSleigh_Json" style="position: absolute;
+    <LottieAnimation ref="SantaSleigh" :animationData="SantaSleigh_Json" :loop="true" style="position: absolute;
         width: 200%; left: 0%; top: -55%; "
         :speed="0.5"
     />
     <Transition>
-      <Vue3Lottie ref="RocketLaunches" :animationData="RocketLaunches_Json" style="position: absolute;
+      <LottieAnimation ref="RocketLaunches" :animationData="RocketLaunches_Json" :loop="true" style="position: absolute;
           width: 50%; right: -14%; top: 0%; "
         v-show="BellOfHappiness_playState"
         :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
     <Transition>
-      <Vue3Lottie ref="WebDev" :animationData="WebDev_Json" style="position: absolute;
+      <LottieAnimation ref="WebDev" :animationData="WebDev_Json" :loop="true" style="position: absolute;
           width: 50%; left: 0%; bottom: 0%; "
-        direction="alternate"
         v-show="!BellOfHappiness_playState"
-        :pauseAnimation="BellOfHappiness_playState && NightEntered"
+        @loopComplete="webDev_LoopComplete"
       />
     </Transition>
     <Transition>
-      <Vue3Lottie ref="DrawingWoman" :animationData="DrawingWoman_Json" style="position: absolute;
+      <LottieAnimation ref="DrawingWoman" :animationData="DrawingWoman_Json" :loop="true" style="position: absolute;
           width: 40%; left: 40%; top: 0%; "
         v-show="!BellOfHappiness_playState"
-        :pauseAnimation="BellOfHappiness_playState && NightEntered"
       />
     </Transition>
-    <Vue3Lottie ref="ChristmasTree" :animationData="ChristmasTree_Json" style="position: absolute;
+    <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" :loop="true" style="position: absolute;
         width: 60%; right: -7%; bottom: -8%; "
-      direction="alternate"
+        @loopComplete="christmasTree_LoopComplete"
     />
     <Transition>
-      <Vue3Lottie ref="CatLoader" :animationData="CatLoader_Json" style="position: absolute;
+      <LottieAnimation ref="CatLoader" :animationData="CatLoader_Json" :loop="true" style="position: absolute;
           width: 20%; right: -3%; bottom: -6%; "
         v-show="!BellOfHappiness_playState"
-        :pauseAnimation="BellOfHappiness_playState && NightEntered"
       />
     </Transition>
     <Transition>
-      <Vue3Lottie ref="AnimationSuccessBack" :animationData="AnimationSuccessBack_Json" style="position: absolute;
+      <LottieAnimation ref="AnimationSuccessBack" :animationData="AnimationSuccessBack_Json" :loop="true" style="position: absolute;
           width: 70%; left: 0%; bottom: -5%; "
         v-show="BellOfHappiness_playState"
-        :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
-    <Vue3Lottie ref="Lights" :animationData="Lights_Json" style="position: absolute;
+    <LottieAnimation ref="Lights" :animationData="Lights_Json" :loop="true" style="position: absolute;
         width: 50%; left: -2%; top: -30%; "
     />
     <Transition>
-      <Vue3Lottie ref="MerryChristmas" :animationData="MerryChristmas_Json" style="position: absolute;
+      <LottieAnimation ref="MerryChristmas" :animationData="MerryChristmas_Json" :loop="true" style="position: absolute;
           width: 60%; left: 40%; top: -30%; "
         v-show="BellOfHappiness_playState"
-        :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
     <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @after-leave="night_AfterLeave">
-      <Vue3Lottie ref="RabbitRunning" :animationData="RabbitRunning_Json" style="position: absolute;
+      <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" :loop="true" style="position: absolute;
           width: 30%; left: -6%; bottom: -10%; "
         v-show="BellOfHappiness_playState"
-        :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
-    <Vue3Lottie ref="BellOfHappiness" :animationData="BellOfHappiness_Json" style="position: absolute;
+    <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json" :loop="true" style="position: absolute;
         width: 20%; top: -5%; right: -3%; "
       :autoPlay="BellOfHappiness_playState"
-      :pauseAnimation="!BellOfHappiness_playState"
       @click="bellOfHappiness_OnClick"
-    />
+    />    
   </div>
 </template>
 
@@ -114,10 +105,12 @@
 </style>
 
 <script>
-import { Vue3Lottie } from 'vue3-lottie'
+//import { Vue3Lottie } from 'vue3-lottie'
 //import 'vue3-lottie/dist/style.css'
+import { LottieAnimation } from 'lottie-web-vue'
 
 import HeartFlyPartical_Json from './HappyNewYear/lotties/43296-heart-fly-partical-transparent-bg-ver2.json'
+//import Snow_Json from './HappyNewYear/lotties/11113-snow.json'
 import SnowFlakes_Json from './HappyNewYear/lotties/130377-snowflakes.json'
 import FirePlace_Json from './HappyNewYear/lotties/129654-fire-place.json'
 import SantaSleigh_Json from './HappyNewYear/lotties/128055-santa-sleigh.json'
@@ -136,17 +129,21 @@ import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happines
 import DiscoCrash_NewYear_mp3 from './HappyNewYear/sounds/Disco_Crash--New Year.mp3'
 
 var audio;
+var webDev_Direction = 1;
+var christmasTree_Direction = 1;
 
 export default {
   name: 'HappyNewYearG',
 
   components: {
-    Vue3Lottie,
+    //Vue3Lottie,
+    LottieAnimation,
   },
 
   data() {
     return {
       HeartFlyPartical_Json,
+      //Snow_Json,
       SnowFlakes_Json,
       FirePlace_Json,
       SantaSleigh_Json,
@@ -166,40 +163,106 @@ export default {
       NightEntered: false,
     }
   },
-
+  
   methods: {
     bellOfHappiness_OnClick() {
       this.BellOfHappiness_playState = !this.BellOfHappiness_playState;
-      if (this.BellOfHappiness_playState)
-        audio.play();
+      this.stateChanged();
+    },
+
+    webDev_LoopComplete() {
+      webDev_Direction = -webDev_Direction;
+
+      this.$refs.WebDev.pause();
+      this.$refs.WebDev.setDirection(webDev_Direction);
+      if (webDev_Direction > 0)
+        this.$refs.WebDev.goToAndPlay(0, true);
       else
-        audio.pause();
+        this.$refs.WebDev.goToAndPlay(this.$refs.WebDev.getDuration(true), true);
+    },
+
+    christmasTree_LoopComplete() {
+      christmasTree_Direction = -christmasTree_Direction;
+
+      this.$refs.ChristmasTree.pause();
+      this.$refs.ChristmasTree.setDirection(christmasTree_Direction);
+      if (christmasTree_Direction > 0)
+        this.$refs.ChristmasTree.goToAndPlay(0, true);
+      else
+        this.$refs.ChristmasTree.goToAndPlay(this.$refs.ChristmasTree.getDuration(true), true);
     },
 
     night_BeforeEnter() {
       this.NightEntered = false;
       this.DayEntered = false;
+      this.stateChanged();
     },
 
     night_AfterEnter() {
       this.NightEntered = true;
+      this.stateChanged();
     },
     
     night_BeforeLeave() {
       this.NightEntered = false;
       this.DayEntered = false;
+      this.stateChanged();
     },
 
     night_AfterLeave() {
       this.DayEntered = true;
+      this.stateChanged();
+    },
+
+    stateChanged() {
+      if (this.BellOfHappiness_playState)
+      {
+        audio.play();
+        this.$refs.BellOfHappiness.play();
+      }
+      else
+      {
+        audio.pause();
+        this.$refs.BellOfHappiness.pause();
+      }
+
+      if (this.BellOfHappiness_playState && this.NightEntered)
+      {
+        this.$refs.HeartFlyPartical.pause();
+        this.$refs.WebDev.pause();
+        this.$refs.DrawingWoman.pause();
+        this.$refs.CatLoader.pause();
+      }
+      else
+      {
+        this.$refs.HeartFlyPartical.play();
+        this.$refs.WebDev.play();
+        this.$refs.DrawingWoman.play();
+        this.$refs.CatLoader.play();
+      }
+
+      if (!this.BellOfHappiness_playState && this.DayEntered)
+      {
+        this.$refs.SnowFlakes.pause();
+        this.$refs.RocketLaunches.pause();
+        this.$refs.AnimationSuccessBack.pause();
+        this.$refs.MerryChristmas.pause();
+      }
+      else
+      {
+        this.$refs.SnowFlakes.play();
+        this.$refs.RocketLaunches.play();
+        this.$refs.AnimationSuccessBack.play();
+        this.$refs.MerryChristmas.play();
+      }
     },
   },
 
   mounted () {
     audio = new Audio(DiscoCrash_NewYear_mp3);
     audio.loop = true;
-    if (this.BellOfHappiness_playState)
-      audio.play();
+
+    this.stateChanged();
   },
 
   unmounted () {

@@ -62,7 +62,6 @@ export default defineUserConfig({
       components: {
         //LottieAnimation: 'lottie-web-vue',
         //Vue3Lottie: 'vue3-lottie',
-        //'vue3-lottie': 'vue3-lottie',
       }
     })
   ],
