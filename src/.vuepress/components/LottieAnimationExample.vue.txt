@@ -2,107 +2,86 @@
   <div ref="scene" style="position: relative;
       box-sizing: border-box; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2);
       overflow: hidden; "
-      :class="{ night : BellOfHappiness_playState,  day : !BellOfHappiness_playState, }"
+    :class="{ [HappyNewYearG.night] : BellOfHappiness_playState,  [HappyNewYearG.day] : !BellOfHappiness_playState, }"
   >
     <Transition>
-      <LottieAnimation ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="HeartFlyPartical" :animationData="HeartFlyPartical_Json" loop style="position: absolute;
           width: 100%; left: 0%; top: 0%; "
         :speed="0.2"
         v-show="!BellOfHappiness_playState"
       />    
     </Transition>
     <Transition>
-      <LottieAnimation ref="SnowFlakes" :animationData="SnowFlakes_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="SnowFlakes" :animationData="SnowFlakes_Json" loop style="position: absolute;
           width: 125%; left: 0%; top: 0%; "
         v-show="BellOfHappiness_playState"
       />
     </Transition>
-    <LottieAnimation ref="FirePlace" :animationData="FirePlace_Json" :loop="true" style="position: absolute;
+    <LottieAnimation ref="FirePlace" :animationData="FirePlace_Json" loop style="position: absolute;
         width: 40%; left: -3%; top: -10%; "
     />
-    <LottieAnimation ref="SantaSleigh" :animationData="SantaSleigh_Json" :loop="true" style="position: absolute;
+    <LottieAnimation ref="SantaSleigh" :animationData="SantaSleigh_Json" loop style="position: absolute;
         width: 200%; left: 0%; top: -55%; "
         :speed="0.5"
     />
     <Transition>
-      <LottieAnimation ref="RocketLaunches" :animationData="RocketLaunches_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="RocketLaunches" :animationData="RocketLaunches_Json" loop style="position: absolute;
           width: 50%; right: -14%; top: 0%; "
         v-show="BellOfHappiness_playState"
         :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
     <Transition>
-      <LottieAnimation ref="WebDev" :animationData="WebDev_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="WebDev" :animationData="WebDev_Json" loop style="position: absolute;
           width: 50%; left: 0%; bottom: 0%; "
         v-show="!BellOfHappiness_playState"
         @loopComplete="webDev_LoopComplete"
       />
     </Transition>
     <Transition>
-      <LottieAnimation ref="DrawingWoman" :animationData="DrawingWoman_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="DrawingWoman" :animationData="DrawingWoman_Json" loop style="position: absolute;
           width: 40%; left: 40%; top: 0%; "
         v-show="!BellOfHappiness_playState"
       />
     </Transition>
-    <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" :loop="true" style="position: absolute;
+    <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" loop style="position: absolute;
         width: 60%; right: -7%; bottom: -8%; "
         @loopComplete="christmasTree_LoopComplete"
     />
     <Transition>
-      <LottieAnimation ref="CatLoader" :animationData="CatLoader_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="CatLoader" :animationData="CatLoader_Json" loop style="position: absolute;
           width: 20%; right: -3%; bottom: -6%; "
         v-show="!BellOfHappiness_playState"
       />
     </Transition>
     <Transition>
-      <LottieAnimation ref="AnimationSuccessBack" :animationData="AnimationSuccessBack_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="AnimationSuccessBack" :animationData="AnimationSuccessBack_Json" loop style="position: absolute;
           width: 70%; left: 0%; bottom: -5%; "
         v-show="BellOfHappiness_playState"
       />
     </Transition>
-    <LottieAnimation ref="Lights" :animationData="Lights_Json" :loop="true" style="position: absolute;
+    <LottieAnimation ref="Lights" :animationData="Lights_Json" loop style="position: absolute;
         width: 50%; left: -2%; top: -30%; "
     />
     <Transition>
-      <LottieAnimation ref="MerryChristmas" :animationData="MerryChristmas_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="MerryChristmas" :animationData="MerryChristmas_Json" loop style="position: absolute;
           width: 60%; left: 40%; top: -30%; "
         v-show="BellOfHappiness_playState"
       />
     </Transition>
     <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @after-leave="night_AfterLeave">
-      <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" :loop="true" style="position: absolute;
+      <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" loop style="position: absolute;
           width: 30%; left: -6%; bottom: -10%; "
         v-show="BellOfHappiness_playState"
       />
     </Transition>
-    <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json" :loop="true" style="position: absolute;
+    <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json" loop style="position: absolute;
         width: 20%; top: -5%; right: -3%; "
       :autoPlay="BellOfHappiness_playState"
       @click="bellOfHappiness_OnClick"
     />    
   </div>
 </template>
-
-<style>
-  .day {
-    background-color: lightblue;
-    transition: all 3s ease;
-  }  
-  .night {
-    background-color: darkorchid;
-    transition: all 3s linear;
-  }  
-
-  .v-enter-active,
-  .v-leave-active {
-    transition: opacity 3s ease;
-  }
-
-  .v-enter-from,
-  .v-leave-to {
-    opacity: 0;
-  }
-</style>
 
 <script>
 // import { LottieAnimation } from 'lottie-web-vue'
@@ -265,3 +244,26 @@ export default {
   }
 }
 </script>
+
+<style module="HappyNewYearG">
+  .day {
+    background-color: lightblue;
+    transition: all 3s ease;
+  }  
+  .night {
+    background-color: darkorchid;
+    transition: all 3s ease;
+  }  
+</style>
+
+<style>
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 3s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
+  }
+</style>
