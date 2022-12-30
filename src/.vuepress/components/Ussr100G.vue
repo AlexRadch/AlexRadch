@@ -1,0 +1,80 @@
+<template>
+  <div ref="scene" style="position: relative;
+      box-sizing: border-box; margin: 0px; width: calc(100% * 1.2); padding: calc(30.5% * 1.2);
+      overflow: hidden; background-color: red; "
+  >
+  <!-- :class="{ [HappyNewYearG.night] : BellOfHappiness_playState,  [HappyNewYearG.day] : !BellOfHappiness_playState, }" -->
+    <img src="@components/Ussr100/images/Union_of_Soviet_Socialist_Republics_(orthographic_projection).svg" 
+      style="position: absolute; right: 0%; top: 0%;"/>
+    <button ref="HymnButton" style="position: absolute; right: 1%; top: 1%; font-size: xx-large; color: red;"
+      @click="hymnButton_OnClick"
+    >✯</button>
+    <LottieAnimation ref="SovietSputnik" :animationData="SovietSputnik_Json" loop style="position: absolute;
+        right: 0%; top: 10%;"
+    /> 
+    <LottieAnimation ref="GlorySovietScience" :animationData="GlorySovietScience_Json" loop style="position: absolute;
+        width: 61%; left: -11.7%; top: 0%;"
+    /> 
+    <!-- @click="bellOfHappiness_OnClick" -->
+    <!-- width: 20%;    -->
+  </div>
+</template>
+
+<script>
+import SovietSputnik_Json from './Ussr100/lotties/102147-soviet-sputnik.json'
+import GlorySovietScience_Json from './Ussr100/lotties/102148-glory-soviet-science.json'
+
+import Hymn_mp3 from './Ussr100/sounds/gimn_sssr_-_gimn_sssr_(z2.fm).mp3'
+
+var audio;
+
+export default {
+  name: 'Ussr100G',
+
+  data() {
+    return {
+      SovietSputnik_Json,
+      GlorySovietScience_Json,
+
+      Hymn_playState: false,
+    }
+  },
+  
+  methods: {
+    hymnButton_OnClick() {
+      this.Hymn_playState = !this.Hymn_playState;
+
+      if (this.Hymn_playState)
+        audio.play();
+      else
+        audio.pause();
+    },
+  },
+
+  mounted () {
+    audio = new Audio(Hymn_mp3);
+    audio.loop = true;
+
+  },
+
+  unmounted () {
+    audio.pause();
+    audio = null;
+  }
+}
+</script>
+
+<style module="Ussr100G">
+</style>
+
+<style>
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 3s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
+  }
+</style>

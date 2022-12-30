@@ -26,34 +26,26 @@ export default defineUserConfig({
 
     navbar: [
       {
-        text: 'Любимой 💕',
-        link: '/ForTheBeloved/',
+        text: 'Friends 🍻',
+        link: '/Friends/',
         children: [
-          '/ForTheBeloved/',
-          '/ForTheBeloved/HappyNewYear/'
+          '/Friends/TheBeloved/HappyNewYear/',
+          '/Friends/Slava/Ussr100/',
         ],
       }
     ],
     sidebar: {
-      '/ForTheBeloved/': [
+      '/Friends/': [
         {
-          text: 'Привет 👋, Любимая 💕',
-          link: '/ForTheBeloved/',
+          text: 'Friends 🍻',
+          link: '/Friends/',
           children: [
-            '/ForTheBeloved/HappyNewYear/'
+            '/Friends/TheBeloved/',
+            '/Friends/Slava/',
           ]
         }
       ]
     }
-    // [
-    //   {
-    //     text: 'Привет 👋, Любимая 💕',
-    //     link: '/ForTheBeloved/',
-    //     children: [
-    //       '/ForTheBeloved/HappyNewYear.md'
-    //     ]
-    //   }
-    // ]
   }),
 
   plugins: [

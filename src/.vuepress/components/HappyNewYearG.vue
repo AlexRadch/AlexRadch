@@ -9,12 +9,14 @@
           width: 100%; left: 0%; top: 0%; "
         :speed="0.2"
         v-show="!BellOfHappiness_playState"
+        :autoPlay="!BellOfHappiness_playState"
       />    
     </Transition>
     <Transition>
       <LottieAnimation ref="SnowFlakes" :animationData="SnowFlakes_Json" loop style="position: absolute;
           width: 125%; left: 0%; top: 0%; "
         v-show="BellOfHappiness_playState"
+        :autoPlay="BellOfHappiness_playState"
       />
     </Transition>
     <LottieAnimation ref="FirePlace" :animationData="FirePlace_Json" loop style="position: absolute;
@@ -35,12 +37,14 @@
       <LottieAnimation ref="WebDev" :animationData="WebDev_Json" loop style="position: absolute;
           width: 50%; left: 0%; bottom: 0%; "
         v-show="!BellOfHappiness_playState"
+        :autoPlay="!BellOfHappiness_playState"
         @loopComplete="webDev_LoopComplete"
       />
     </Transition>
     <Transition>
       <LottieAnimation ref="DrawingWoman" :animationData="DrawingWoman_Json" loop style="position: absolute;
           width: 40%; left: 40%; top: 0%; "
+        :autoPlay="!BellOfHappiness_playState"
         v-show="!BellOfHappiness_playState"
       />
     </Transition>
@@ -52,12 +56,14 @@
       <LottieAnimation ref="CatLoader" :animationData="CatLoader_Json" loop style="position: absolute;
           width: 20%; right: -3%; bottom: -6%; "
         v-show="!BellOfHappiness_playState"
+        :autoPlay="!BellOfHappiness_playState"
       />
     </Transition>
     <Transition>
       <LottieAnimation ref="AnimationSuccessBack" :animationData="AnimationSuccessBack_Json" loop style="position: absolute;
           width: 70%; left: 0%; bottom: -5%; "
         v-show="BellOfHappiness_playState"
+        :autoPlay="BellOfHappiness_playState"
       />
     </Transition>
     <LottieAnimation ref="Lights" :animationData="Lights_Json" loop style="position: absolute;
@@ -67,16 +73,18 @@
       <LottieAnimation ref="MerryChristmas" :animationData="MerryChristmas_Json" loop style="position: absolute;
           width: 60%; left: 40%; top: -30%; "
         v-show="BellOfHappiness_playState"
+        :autoPlay="BellOfHappiness_playState"
       />
     </Transition>
     <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @after-leave="night_AfterLeave">
       <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" loop style="position: absolute;
           width: 30%; left: -6%; bottom: -10%; "
+        :autoPlay="BellOfHappiness_playState"
         v-show="BellOfHappiness_playState"
       />
     </Transition>
     <LottieAnimation ref="BellOfHappiness" :animationData="BellOfHappiness_Json" loop style="position: absolute;
-        width: 20%; top: -5%; right: -3%; "
+        width: 20%; right: -3%; top: -5%; "
       :autoPlay="BellOfHappiness_playState"
       @click="bellOfHappiness_OnClick"
     />    
