@@ -5,8 +5,9 @@
   >
   <!-- :class="{ [HappyNewYearG.night] : BellOfHappiness_playState,  [HappyNewYearG.day] : !BellOfHappiness_playState, }" -->
     <img src="@components/Ussr100/images/Union_of_Soviet_Socialist_Republics_(orthographic_projection).svg" 
-      style="position: absolute; right: 0%; top: 0%;"/>
+      style="position: absolute; right: 0%; top: 0%;" />
     <button ref="HymnButton" style="position: absolute; right: 1%; top: 1%; font-size: xx-large; color: red;"
+      title="Гимн СССР"
       @click="hymnButton_OnClick"
     >✯</button>
     <LottieAnimation ref="SovietSputnik" :animationData="SovietSputnik_Json" loop style="position: absolute;

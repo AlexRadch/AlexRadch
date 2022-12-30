@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-87fdc32c","path":"/Friends/Slava/Ussr100/","title":"☭☭☭ Сто лет СССР ✯✯✯","lang":"ru-RU","frontmatter":{"lang":"ru-RU","title":"☭☭☭ Сто лет СССР ✯✯✯"},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"Friends/Slava/Ussr100/README.md"}');export{t as data};
