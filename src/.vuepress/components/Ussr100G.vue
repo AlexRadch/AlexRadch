@@ -12,16 +12,22 @@
     <LottieAnimation ref="GlorySovietScience" :animationData="GlorySovietScience_Json" loop style="position: absolute;
         width: 61%; left: -11.7%; top: 0%;"
     /> 
-    <button ref="HymnButton" style="position: absolute; right: 1%; top: 1%; font-size: xx-large; color: red;"
+    <!-- <button ref="HymnButton" style="position: absolute; right: 1%; top: 1%; font-size: xx-large; color: red;"
       title="Гимн СССР"
       @click="hymnButton_OnClick"
-    >✯</button>
+    >✯</button> -->
+    <LottieAnimation ref="Star" :animationData="Star_Json" loop style="position: absolute;
+        width: 35%; right: -12%; top: -19%;"
+      :autoPlay="Hymn_playState"
+      @click="hymnButton_OnClick"
+    /> 
   </div>
 </template>
 
 <script>
 import SovietSputnik_Json from './Ussr100/lotties/102147-soviet-sputnik.json'
 import GlorySovietScience_Json from './Ussr100/lotties/102148-glory-soviet-science.json'
+import Star_Json from './Ussr100/lotties/1643-exploding-star.json'
 
 import Hymn_mp3 from './Ussr100/sounds/gimn_sssr_-_gimn_sssr_(z2.fm).mp3'
 
@@ -34,6 +40,7 @@ export default {
     return {
       SovietSputnik_Json,
       GlorySovietScience_Json,
+      Star_Json,
 
       Hymn_playState: false,
     }
@@ -44,9 +51,16 @@ export default {
       this.Hymn_playState = !this.Hymn_playState;
 
       if (this.Hymn_playState)
+      {
         audio.play();
+        this.$refs.Star.play();
+      }
       else
+      {
         audio.pause();
+        this.$refs.Star.pause();
+        this.$refs.Star.goToAndStop(0, true);
+      }
     },
   },
 
