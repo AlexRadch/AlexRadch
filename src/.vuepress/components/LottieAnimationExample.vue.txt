@@ -30,7 +30,6 @@
       <LottieAnimation ref="RocketLaunches" :animationData="RocketLaunches_Json" loop style="position: absolute;
           width: 50%; right: -14%; top: 0%; "
         v-show="BellOfHappiness_playState"
-        :pauseAnimation="!BellOfHappiness_playState && DayEntered"
       />
     </Transition>
     <Transition>
@@ -76,7 +75,7 @@
         :autoPlay="BellOfHappiness_playState"
       />
     </Transition>
-    <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @after-leave="night_AfterLeave">
+    <Transition @before-enter="night_BeforeEnter" @after-enter="night_AfterEnter" @before-leave="day_BeforeLeave" @after-leave="day_AfterLeave">
       <LottieAnimation ref="RabbitRunning" :animationData="RabbitRunning_Json" loop style="position: absolute;
           width: 30%; left: -6%; bottom: -10%; "
         :autoPlay="BellOfHappiness_playState"
@@ -184,13 +183,13 @@ export default {
       this.stateChanged();
     },
     
-    night_BeforeLeave() {
+    day_BeforeLeave() {
       this.NightEntered = false;
       this.DayEntered = false;
       this.stateChanged();
     },
 
-    night_AfterLeave() {
+    day_AfterLeave() {
       this.DayEntered = true;
       this.stateChanged();
     },
