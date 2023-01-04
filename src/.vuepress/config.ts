@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { getDirname, path } from '@vuepress/utils'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url)
 
@@ -61,4 +62,10 @@ export default defineUserConfig({
   alias: {
     '@components': path.resolve(__dirname, './components/'),
   },  
+
+  bundler: viteBundler({
+    vuePluginOptions: {
+      reactivityTransform: true,
+    },
+  }),  
 })

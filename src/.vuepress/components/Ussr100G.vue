@@ -11,10 +11,6 @@
     <LottieAnimation :animationData="GlorySovietScience_Json" loop style="position: absolute;
         width: 61%; left: -11.7%; top: 0%;"
     /> 
-    <!-- <button ref="HymnButton" style="position: absolute; right: 1%; top: 1%; font-size: xx-large; color: red;"
-      title="Гимн СССР"
-      @click="hymnButton_OnClick"
-    >✯</button> -->
     <LottieAnimation ref="Star" :animationData="Star_Json" loop style="position: absolute;
         width: 35%; right: -12%; top: -19%;"
       :autoPlay="Hymn_playState"
@@ -31,26 +27,26 @@ import Star_Json from './Ussr100/lotties/1643-exploding-star.json'
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { $ref } from 'vue/macros'
 
 let Hymn_playState = false;
 
-const Star = ref();
-const Audio = ref();
+const Star = $ref<any>();
+const Audio = $ref<any>();
 
 function hymnButton_OnClick() {
   Hymn_playState = !Hymn_playState;
 
   if (Hymn_playState)
   {
-    Audio.value.play();
-    Star.value.play();
+    Audio.play();
+    Star.play();
   }
   else
   {
-    Audio.value.pause();
-    Star.value.pause();
-    Star.value.goToAndStop(0, true);
+    Audio.pause();
+    Star.pause();
+    Star.goToAndStop(0, true);
   }
 }
 </script>
