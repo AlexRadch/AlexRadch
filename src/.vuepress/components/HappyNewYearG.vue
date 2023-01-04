@@ -110,24 +110,25 @@ import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happines
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { $ref } from 'vue/macros'
 
-const HeartFlyPartical = ref();
-const SnowFlakes = ref();
-const RocketLaunches = ref();
-const WebDev = ref();
-const DrawingWoman = ref();
-const ChristmasTree = ref();
-const CatLoader = ref();
-const AnimationSuccessBack = ref();
-const MerryChristmas = ref();
-const RabbitRunning = ref();
-const BellOfHappiness = ref();
+const HeartFlyPartical = $ref<any>();
+const SnowFlakes = $ref<any>();
+const RocketLaunches = $ref<any>();
+const WebDev = $ref<any>();
+const DrawingWoman = $ref<any>();
+const ChristmasTree = $ref<any>();
+const CatLoader = $ref<any>();
+const AnimationSuccessBack = $ref<any>();
+const MerryChristmas = $ref<any>();
+const RabbitRunning = $ref<any>();
+const BellOfHappiness = $ref<any>();
 
-const Audio = ref();
-const BellOfHappiness_playState = ref(false);
+const Audio = $ref<any>();
+let BellOfHappiness_playState = $ref(false);
 
 function bellOfHappiness_OnClick() {
-  BellOfHappiness_playState.value = !BellOfHappiness_playState.value;
+  BellOfHappiness_playState = !BellOfHappiness_playState;
   stateChanged();
 }
 
@@ -135,24 +136,24 @@ let webDev_Direction = 1;
 function webDev_LoopComplete() {
   webDev_Direction = -webDev_Direction;
 
-  WebDev.value.pause();
-  WebDev.value.setDirection(webDev_Direction);
+  WebDev.pause();
+  WebDev.setDirection(webDev_Direction);
   if (webDev_Direction > 0)
-    WebDev.value.goToAndPlay(0, true);
+    WebDev.goToAndPlay(0, true);
   else
-    WebDev.value.goToAndPlay(WebDev.value.getDuration(true), true);
+    WebDev.goToAndPlay(WebDev.getDuration(true), true);
 }
 
 let christmasTree_Direction = 1;
 function christmasTree_LoopComplete() {
   christmasTree_Direction = -christmasTree_Direction;
 
-  ChristmasTree.value.pause();
-  ChristmasTree.value.setDirection(christmasTree_Direction);
+  ChristmasTree.pause();
+  ChristmasTree.setDirection(christmasTree_Direction);
   if (christmasTree_Direction > 0)
-    ChristmasTree.value.goToAndPlay(0, true);
+    ChristmasTree.goToAndPlay(0, true);
   else
-    ChristmasTree.value.goToAndPlay(ChristmasTree.value.getDuration(true), true);
+    ChristmasTree.goToAndPlay(ChristmasTree.getDuration(true), true);
 }
 
 let DayEntered = true;
@@ -181,45 +182,45 @@ function day_AfterLeave() {
 }
 
 function stateChanged() {
-  if (BellOfHappiness_playState.value)
+  if (BellOfHappiness_playState)
   {
-    Audio.value.play();
-    BellOfHappiness.value.play();
+    Audio.play();
+    BellOfHappiness.play();
   }
   else
   {
-    Audio.value.pause();
-    BellOfHappiness.value.pause();
+    Audio.pause();
+    BellOfHappiness.pause();
   }
 
-  if (BellOfHappiness_playState.value && NightEntered)
+  if (BellOfHappiness_playState && NightEntered)
   {
-    HeartFlyPartical.value.pause();
-    WebDev.value.pause();
-    DrawingWoman.value.pause();
-    CatLoader.value.pause();
+    HeartFlyPartical.pause();
+    WebDev.pause();
+    DrawingWoman.pause();
+    CatLoader.pause();
   }
   else
   {
-    HeartFlyPartical.value.play();
-    WebDev.value.play();
-    DrawingWoman.value.play();
-    CatLoader.value.play();
+    HeartFlyPartical.play();
+    WebDev.play();
+    DrawingWoman.play();
+    CatLoader.play();
   }
 
-  if (!BellOfHappiness_playState.value && DayEntered)
+  if (!BellOfHappiness_playState && DayEntered)
   {
-    SnowFlakes.value.pause();
-    RocketLaunches.value.pause();
-    AnimationSuccessBack.value.pause();
-    MerryChristmas.value.pause();
+    SnowFlakes.pause();
+    RocketLaunches.pause();
+    AnimationSuccessBack.pause();
+    MerryChristmas.pause();
   }
   else
   {
-    SnowFlakes.value.play();
-    RocketLaunches.value.play();
-    AnimationSuccessBack.value.play();
-    MerryChristmas.value.play();
+    SnowFlakes.play();
+    RocketLaunches.play();
+    AnimationSuccessBack.play();
+    MerryChristmas.play();
   }
 }
 </script>

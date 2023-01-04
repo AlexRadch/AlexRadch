@@ -27,6 +27,7 @@ import Star_Json from './Ussr100/lotties/1643-exploding-star.json'
 </script>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { $ref } from 'vue/macros'
 
 let Hymn_playState = false;
