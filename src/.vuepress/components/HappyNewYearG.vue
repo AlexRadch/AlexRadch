@@ -27,7 +27,7 @@
     />
     <Transition>
       <LottieAnimation ref="RocketLaunches" :animationData="RocketLaunches_Json" loop style="position: absolute;
-          width: 50%; right: -14%; top: 0%; "
+          width: 50%; right: -15%; top: 0%; "
         v-show="BellOfHappiness_playState"
         :autoPlay="BellOfHappiness_playState"
       />
@@ -68,9 +68,16 @@
     <LottieAnimation :animationData="Lights_Json" loop style="position: absolute;
         width: 50%; left: -2%; top: -30%; "
     />
-    <Transition>
+    <!-- <Transition>
       <LottieAnimation ref="MerryChristmas" :animationData="MerryChristmas_Json" loop style="position: absolute;
           width: 60%; left: 40%; top: -30%; "
+        v-show="BellOfHappiness_playState"
+        :autoPlay="BellOfHappiness_playState"
+      />
+    </Transition> -->
+    <Transition>
+      <LottieAnimation ref="NewYear" :animationData="NewYear_Json" loop style="position: absolute;
+          width: 40%; left: 52%; top: -5%; "
         v-show="BellOfHappiness_playState"
         :autoPlay="BellOfHappiness_playState"
       />
@@ -103,7 +110,8 @@ import ChristmasTree_Json from './HappyNewYear/lotties/41812-christmas-tree.json
 import CatLoader_Json from './HappyNewYear/lotties/76266-cat-loader.json'
 import AnimationSuccessBack_Json from './HappyNewYear/lotties/125505-animation-success-back.json'
 import Lights_Json from './HappyNewYear/lotties/129650-lights.json'
-import MerryChristmas_Json from './HappyNewYear/lotties/88762-merry-christmas.json'
+//import MerryChristmas_Json from './HappyNewYear/lotties/88762-merry-christmas.json'
+import NewYear_Json from './HappyNewYear/lotties/132032-new-year.json'
 import RabbitRunning_Json from './HappyNewYear/lotties/106450-rabbit-running.json'
 import BellOfHappiness_Json from './HappyNewYear/lotties/131384-bell-of-happiness.json'
 </script>
@@ -120,7 +128,8 @@ const DrawingWoman = $ref<any>();
 const ChristmasTree = $ref<any>();
 const CatLoader = $ref<any>();
 const AnimationSuccessBack = $ref<any>();
-const MerryChristmas = $ref<any>();
+//const MerryChristmas = $ref<any>();
+const NewYear = $ref<any>();
 const RabbitRunning = $ref<any>();
 const BellOfHappiness = $ref<any>();
 
@@ -213,14 +222,16 @@ function stateChanged() {
     SnowFlakes.pause();
     RocketLaunches.pause();
     AnimationSuccessBack.pause();
-    MerryChristmas.pause();
+    //MerryChristmas.pause();
+    NewYear.pause();
   }
   else
   {
     SnowFlakes.play();
     RocketLaunches.play();
     AnimationSuccessBack.play();
-    MerryChristmas.play();
+    //MerryChristmas.play();
+    NewYear.play();
   }
 }
 </script>
