@@ -16,7 +16,7 @@
       :autoPlay="Hymn_playState"
       @click="hymnButton_OnClick"
     />
-    <audio ref="Audio" hidden="true" loop><source src="@components/Ussr100/sounds/gimn_sssr_-_gimn_sssr_(z2.fm).mp3" type="audio/mpeg"></audio>
+    <audio ref="Audio" hidden="true" loop><source src="@components/Ussr100/sounds/gimn_sssr_-_gimn_sssr_(z2.fm).mp3" type="audio/mpeg" /></audio>
   </div>
 </template>
 
@@ -51,15 +51,3 @@ function hymnButton_OnClick() {
   }
 }
 </script>
-
-<style>
-  .v-enter-active,
-  .v-leave-active {
-    transition: opacity 3s ease;
-  }
-
-  .v-enter-from,
-  .v-leave-to {
-    opacity: 0;
-  }
-</style>

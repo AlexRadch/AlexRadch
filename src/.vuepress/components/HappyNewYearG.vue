@@ -94,7 +94,7 @@
       :autoPlay="BellOfHappiness_playState"
       @click="bellOfHappiness_OnClick"
     />    
-    <audio ref="Audio" hidden="true" loop><source src="@components/HappyNewYear/sounds/Disco_Crash--New_Year.mp3" type="audio/mpeg"></audio>
+    <audio ref="Audio" hidden="true" loop><source src="@components/HappyNewYear/sounds/Disco_Crash--New_Year.mp3" type="audio/mpeg" /></audio>
   </div>
 </template>
 

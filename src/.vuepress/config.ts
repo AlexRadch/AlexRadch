@@ -30,8 +30,9 @@ export default defineUserConfig({
         text: 'Friends 🍻',
         link: '/Friends/',
         children: [
-          '/Friends/TheBeloved/HappyNewYear/',
-          '/Friends/Slava/Ussr100/',
+          '/Friends/TheBeloved/MerryChristmas.md',
+          '/Friends/TheBeloved/HappyNewYear.md',
+          '/Friends/Slava/Ussr100.md',
         ],
       }
     ],
@@ -52,10 +53,7 @@ export default defineUserConfig({
   plugins: [
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components/'),
-      components: {
-        //LottieAnimation: 'lottie-web-vue',
-        //Vue3Lottie: 'vue3-lottie',
-      }
+      components: {}
     })
   ],
 
