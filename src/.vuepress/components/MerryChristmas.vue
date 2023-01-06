@@ -9,6 +9,7 @@
     /> <!-- bottom: -53.7%; -->
     <img src="@components/MerryChristmas/images/bell.png" style="position: absolute; user-select: none;
       width: 5%; right: 4%; top: 2%;"
+      class="noZoom"
       :class="{[MerryChristmas.animationPaused]: !audio_PlayState, [MerryChristmas.bell]: true, }"
       @click="audio_PlayPause"
     />
