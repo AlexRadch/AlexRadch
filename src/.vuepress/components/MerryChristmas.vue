@@ -1,95 +1,97 @@
 <template>
-  <div style="position: relative;
-      box-sizing: border-box; container-type: size; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
-      overflow: hidden; background-color: darkgreen; background-image: url(@components/MerryChristmas/images/noise-2x.png)"
-      :class="[MerryChristmas.text]"
-  >
-  <!-- :style="{ backgroundImage: 'url(' + '@components/MerryChristmas/images/noise-2x.png' + ')' }" -->
-    <!-- <img src="@components/MerryChristmas/images/santa_with_black_glasses.png" style="position: absolute; user-select: none;
-      width: 20%; left: 15%; top: 0%;"
-      :style="{animationDelay: random01 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    /> -->
-    <img src="@components/MerryChristmas/images/santa_flying.png" style="position: absolute; user-select: none;
-      width: 20%; left: 20%; top: -1%;"
-      :style="{animationDelay: random02 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <img src="@components/MerryChristmas/images/hand_with_gift_angle.png" style="position: absolute; user-select: none;
-      width: 25%; right: 20%; top: 1%;"
-      :style="{animationDelay: random03 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <LottieAnimation :animationData="ChristmasSleigh_Json" loop style="position: absolute;
-        width: 100%; left: 0%; top: 0%"
-    /> <!-- bottom: -53.7%; -->
-    <img src="@components/MerryChristmas/images/bell.png" style="position: absolute; user-select: none;
-      width: 5%; right: 4%; top: 2%;"
-      class="noZoom"
-      :class="{animationPaused: !audio_PlayState, animationRunning: audio_PlayState, [MerryChristmas.bell]: true, }"
-      @click="audio_PlayPause"
-    />
-    <img src="@components/MerryChristmas/images/ginger_breadman_angle.png" style="position: absolute; user-select: none;
-      width: 15%; left: 2%; top: 58%; rotate: 10deg;"
-      :style="{animationDelay: random06 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <img src="@components/MerryChristmas/images/hand_with_lollypop_angle.png" style="position: absolute; user-select: none;
-      width: 15%; left: 1%; top: 40%; rotate: 10deg;"
-      :style="{animationDelay: random05 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <img src="@components/MerryChristmas/images/hand_with_a_candy_stick_angle.png" style="position: absolute; user-select: none;
-      width: 15%; left: 1%; top: 25%; rotate: 10deg;"
-      :style="{animationDelay: random04 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <img src="@components/MerryChristmas/images/snowman_angle.png" style="position: absolute; user-select: none;
-      width: 40%; right: -6%; top: 25%;"
-      :style="{animationDelay: random07 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" loop style="position: absolute;
-        width: 60%; right: -7%; bottom: -5.5%; "
-        @loopComplete="christmasTree_LoopComplete"
-    />
-    <LottieAnimation :animationData="CatLoader_Json" loop style="position: absolute;
-        width: 20%; right: -3%; bottom: -4.4%; "
-    />
-    <div style="position: absolute;
-      left: 20%; top: 20%;"
+  <div style="container-type: size;">
+    <div style="position: relative;
+        box-sizing: border-box; container-type: size; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
+        overflow: hidden; background-color: darkgreen; background-image: url(@components/MerryChristmas/images/noise-2x.png)"
+        :class="[MerryChristmas.text]"
     >
-      <p>
-        Пусть ночь искрится волшебством, <br />
-        Несётся ввысь снежинок стая. <br />
-        Я поздравляю с Рождеством, <br />
-        Тебя любимая, родная.
-      </p>
-      <p>
-        Поток божественной любви <br />
-        Струится пусть чудесным светом, <br />
-        И нас Господь благословит <br />
-        Здоровьем, счастьем и успехом!
-      </p>
-    </div>
-    <img src="@components/MerryChristmas/images/santa_sleds_with_deers.png" style="position: absolute; user-select: none;
-      width: 45%; left: 5%; bottom: 4%; rotate: -5deg;"
-      :style="{animationDelay: random08 * 8 - 8 + 's', }"
-      class="noZoom"
-      :class="[MerryChristmas.flying]"
-    />
-    <img src="@components/MerryChristmas/images/santa_on_the_ground.png" style="position: absolute; user-select: none;
-      width: 30%; right: 20%; bottom: 0%;"
-      class="noZoom"
-    />
-    <audio ref="Audio" hidden="true" loop><source src="@components/MerryChristmas/sounds/Love_to_Sing--We_Wish_You_a_Merry_Christmas.mp3" type="audio/mpeg" /></audio>
+      <!-- :style="{ backgroundImage: 'url(' + '@components/MerryChristmas/images/noise-2x.png' + ')' }" -->
+      <!-- <img src="@components/MerryChristmas/images/santa_with_black_glasses.png" style="position: absolute; user-select: none;
+        width: 20%; left: 15%; top: 0%;"
+        :style="{animationDelay: random01 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      /> -->
+      <img src="@components/MerryChristmas/images/santa_flying.png" style="position: absolute; user-select: none;
+        width: 20%; left: 20%; top: -1%;"
+        :style="{animationDelay: random02 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <img src="@components/MerryChristmas/images/hand_with_gift_angle.png" style="position: absolute; user-select: none;
+        width: 25%; right: 20%; top: 1%;"
+        :style="{animationDelay: random03 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <LottieAnimation :animationData="ChristmasSleigh_Json" loop style="position: absolute;
+          width: 100%; left: 0%; top: 0%"
+      /> <!-- bottom: -53.7%; -->
+      <img src="@components/MerryChristmas/images/bell.png" style="position: absolute; user-select: none;
+        width: 5%; right: 4%; top: 2%;"
+        class="noZoom"
+        :class="{animationPaused: !audio_PlayState, animationRunning: audio_PlayState, [MerryChristmas.bell]: true, }"
+        @click="audio_PlayPause"
+      />
+      <img src="@components/MerryChristmas/images/ginger_breadman_angle.png" style="position: absolute; user-select: none;
+        width: 15%; left: 2%; top: 58%; rotate: 10deg;"
+        :style="{animationDelay: random06 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <img src="@components/MerryChristmas/images/hand_with_lollypop_angle.png" style="position: absolute; user-select: none;
+        width: 15%; left: 1%; top: 40%; rotate: 10deg;"
+        :style="{animationDelay: random05 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <img src="@components/MerryChristmas/images/hand_with_a_candy_stick_angle.png" style="position: absolute; user-select: none;
+        width: 15%; left: 1%; top: 25%; rotate: 10deg;"
+        :style="{animationDelay: random04 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <img src="@components/MerryChristmas/images/snowman_angle.png" style="position: absolute; user-select: none;
+        width: 40%; right: -6%; top: 25%;"
+        :style="{animationDelay: random07 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <LottieAnimation ref="ChristmasTree" :animationData="ChristmasTree_Json" loop style="position: absolute;
+          width: 60%; right: -7%; bottom: -5.5%; "
+          @loopComplete="christmasTree_LoopComplete"
+      />
+      <LottieAnimation :animationData="CatLoader_Json" loop style="position: absolute;
+          width: 20%; right: -3%; bottom: -4.4%; "
+      />
+      <div style="position: absolute;
+        left: 20%; top: 20%;"
+      >
+        <p>
+          Пусть ночь искрится волшебством, <br />
+          Несётся ввысь снежинок стая. <br />
+          Я поздравляю с Рождеством, <br />
+          Тебя любимая, родная.
+        </p>
+        <p>
+          Поток божественной любви <br />
+          Струится пусть чудесным светом, <br />
+          И нас Господь благословит <br />
+          Здоровьем, счастьем и успехом!
+        </p>
+      </div>
+      <img src="@components/MerryChristmas/images/santa_sleds_with_deers.png" style="position: absolute; user-select: none;
+        width: 45%; left: 5%; bottom: 4%; rotate: -5deg;"
+        :style="{animationDelay: random08 * 8 - 8 + 's', }"
+        class="noZoom"
+        :class="[MerryChristmas.flying]"
+      />
+      <img src="@components/MerryChristmas/images/santa_on_the_ground.png" style="position: absolute; user-select: none;
+        width: 30%; right: 20%; bottom: 0%;"
+        class="noZoom"
+      />
+      <audio ref="Audio" hidden="true" loop><source src="@components/MerryChristmas/sounds/Love_to_Sing--We_Wish_You_a_Merry_Christmas.mp3" type="audio/mpeg" /></audio>
+  </div>
   </div>
 </template>
 
@@ -168,7 +170,7 @@ function christmasTree_LoopComplete() {
   font-size: 34px;
   font-size: calc(var(--content-width) * 0.046);
   font-size: 2vw;
-  font-size: 11.2cqw;
+  font-size: 4.6cqw;
       
   color: yellowgreen; 
   text-shadow: 
