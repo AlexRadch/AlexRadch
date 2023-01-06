@@ -1,6 +1,6 @@
 <template>
   <div style="position: relative;
-      box-sizing: border-box; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
+      box-sizing: border-box; container-type: size; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
       overflow: hidden; background-color: darkgreen; background-image: url(@components/MerryChristmas/images/noise-2x.png)"
   >
   <!-- :style="{ backgroundImage: 'url(' + '@components/MerryChristmas/images/noise-2x.png' + ')' }" -->
@@ -102,6 +102,9 @@ function audio_PlayPause() {
 .text {
   font-family: 'Marck Script', cursive;
   font-size: 34px;
+  font-size: 4vw;
+  font-size: calc(var(--content-width) * 0.046);
+  font-size: 11.2cqw;
       
   color: yellowgreen; 
   text-shadow: 1px 1px 2px black, 0 0 5px whitesmoke;
