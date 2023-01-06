@@ -147,16 +147,19 @@ function christmasTree_LoopComplete() {
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 .bell {
+  filter: drop-shadow(4.5px 4.5px 9px black);
  	animation: bell 1s ease-in-out infinite alternate ;
   transform-origin: top center;
 }
 
 @keyframes bell {
   from {
-    rotate: -45deg;
+    rotate: 45deg;
+    filter: drop-shadow(6px 6px 12px black);
   }
   to {
-    rotate: 45deg;
+    rotate: -45deg;
+    filter: drop-shadow(3px 3px 6px black);
   }
 }
 
@@ -190,7 +193,7 @@ function christmasTree_LoopComplete() {
 }
 
 .flying {
-  filter: drop-shadow(3px 3px 6px black);
+  filter: drop-shadow(4.5px 4.5px 9px black);
 	animation: flying 5s ease-in-out infinite alternate;
 }
 
