@@ -1,7 +1,7 @@
 <template>
-  <div style="container-type: size;">
+  <div style="container-type: inline-size;">
     <div style="position: relative;
-        box-sizing: border-box; container-type: size; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
+        box-sizing: border-box; margin: 0px; width: calc(100% * 1.2); padding: calc(33% * 1.2); padding-top: 100%;
         overflow: hidden; background-color: darkgreen; background-image: url(@components/MerryChristmas/images/noise-2x.png)"
         :class="[MerryChristmas.text]"
     >
