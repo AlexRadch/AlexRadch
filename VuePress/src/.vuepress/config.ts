@@ -8,8 +8,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
-  base: '/AlexRadch/',
-  dest: 'docs',
+  base: '/AlexRadch/VuePress/',
+  dest: '../docs/VuePress',
 
   lang: 'en-US',
   title: 'Alexander Radchenko GitHub site',
@@ -24,7 +24,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     repo: 'AlexRadch/AlexRadch',
     //repoLabel: 'GitHub',
-    docsDir: 'src',
+    docsDir: 'VuePress/src',
 
     navbar: [
       {
