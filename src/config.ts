@@ -1,15 +1,13 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'Alexander Radchenko GitHub site',
+	description: 'I\'m creating software engineering tips and tricks videos on DrNet channel. If you are interested in everything related to .NET, check out 👀 my videos!',
 	defaultLanguage: 'en_US',
 };
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
-		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
+		src: 'https://sdk.bitmoji.com/render/panel/10222622-99101925628_11-s5-v1.png?transparent=1&palette=1&scale=0',
+		alt: 'equation meme',
 	},
 	twitter: 'astrodotbuild',
 };
@@ -27,12 +25,13 @@ export type Frontmatter = {
 
 export const KNOWN_LANGUAGES = {
 	English: 'en',
+	Russian: 'ru',
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = `https://github.com/AlexRadch/AlexRadch`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = `https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -47,11 +46,16 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+		'About': [
+			{ text: 'Hi 👋', link: 'en/README' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+	},
+	ru: {
+		'О сайте': [
+			{ text: 'Привет 👋', link: 'ru/README' },
+		],
+		'Друзьям': [
+			{ text: 'Привет 👋', link: 'ru/README' },
+		],
 	},
 };
