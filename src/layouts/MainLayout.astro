@@ -21,12 +21,12 @@ const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 ---
 
-<html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
+<html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? frontmatter.ogLocale ?? CONFIG.SITE.defaultLanguage ?? 'en-US'} class="initial">
 	<head>
 		<HeadCommon />
 		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
 		<title>
-			{frontmatter.title ? `${frontmatter.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}
+			{frontmatter.title ? `${frontmatter.title} | ${CONFIG.SITE.title}` : CONFIG.SITE.title}
 		</title>
 		<style>
 			body {

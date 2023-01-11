@@ -1,10 +1,10 @@
 ---
-title: Hi 👋
+title: Hi 👋, I'm Alexander Radchenko
 description: I'm creating software engineering tips and tricks videos on DrNet channel. If you are interested in everything related to .NET, check out 👀 my videos!
 layout: ../../layouts/MainLayout.astro
 ---
 
-## I'm Alexander Radchenko
+# Hi 👋, I'm Alexander Radchenko
 
 [![YouTube](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA)
 [![GitHub](https://img.shields.io/github/followers/AlexRadch?style=social)](https://github.com/AlexRadch)

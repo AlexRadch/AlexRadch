@@ -1,10 +1,11 @@
 ---
-title: Привет 👋
+title: Привет 👋, я Александр Радченко
 description: Я создаю видеоролики с советами и рекомендациями по разработке программного обеспечения на канале DrNet. Если вам интересно все, что связано с .NET, посмотрите 👀 мои видео!
 layout: ../../layouts/MainLayout.astro
+lang: ru_RU
 ---
 
-## Я Александр Радченко
+# Привет 👋, я Александр Радченко
 
 [![YouTube](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA)
 [![GitHub](https://img.shields.io/github/followers/AlexRadch?style=social)](https://github.com/AlexRadch)

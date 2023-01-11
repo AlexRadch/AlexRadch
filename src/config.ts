@@ -9,7 +9,7 @@ export const OPEN_GRAPH = {
 		src: 'https://sdk.bitmoji.com/render/panel/10222622-99101925628_11-s5-v1.png?transparent=1&palette=1&scale=0',
 		alt: 'equation meme',
 	},
-	twitter: 'astrodotbuild',
+	twitter: 'AlexRadc',
 };
 
 // This is the type of the frontmatter you put in the docs markdown files.

@@ -24,7 +24,7 @@ const lang = getLanguageFromURL(currentPage);
 		<div class="logo flex">
 			<a href="/">
 				<AstroLogo size={40} />
-				<h1>{CONFIG.SITE.title ?? 'Documentation'}</h1>
+				<span>{CONFIG.SITE.title ?? 'Documentation'}</span>
 			</a>
 		</div>
 		<div style="flex-grow: 1;"></div>
@@ -54,7 +54,7 @@ const lang = getLanguageFromURL(currentPage);
 		display: flex;
 		overflow: hidden;
 		width: 30px;
-		font-size: 2rem;
+		font-size: 1.2rem;
 		flex-shrink: 0;
 		font-weight: 600;
 		line-height: 1;
