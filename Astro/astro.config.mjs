@@ -10,5 +10,7 @@ export default defineConfig({
 		// Enable React for the Algolia search component.
 		react(),
 	],
-	site: `https://astro.build`,
+	outDir: '../docs/Astro',
+	site: 'https://alexradch.github.io',
+	base: '/AlexRadch/Astro',
 });
