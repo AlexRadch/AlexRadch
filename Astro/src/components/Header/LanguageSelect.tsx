@@ -29,9 +29,9 @@ const LanguageSelect: FunctionComponent<{ lang: string }> = ({ lang }) => {
 				value={lang}
 				onChange={(e) => {
 					const newLang = e.target.value;
-					let actualDest = window.location.pathname.replace(langPathRegex, '/');
+					let actualDest = window.location.pathname.replace(langPathRegex, '/' + newLang + '/');
 					if (actualDest == '/') actualDest = `/introduction`;
-					window.location.pathname = '/' + newLang + actualDest;
+					window.location.pathname = actualDest;
 				}}
 			>
 				{Object.entries(KNOWN_LANGUAGES).map(([key, value]) => {

@@ -2,6 +2,7 @@ export const SITE = {
 	title: 'Alexander Radchenko GitHub site',
 	description: 'I\'m creating software engineering tips and tricks videos on DrNet channel. If you are interested in everything related to .NET, check out 👀 my videos!',
 	defaultLanguage: 'en_US',
+	base: import.meta.env.BASE_URL.substring(1),
 };
 
 export const OPEN_GRAPH = {
@@ -47,15 +48,15 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	en: {
 		'About': [
-			{ text: 'Hi 👋', link: 'en/README' },
+			{ text: 'Hi 👋', link: SITE.base + 'en/README' },
 		],
 	},
 	ru: {
 		'О сайте': [
-			{ text: 'Привет 👋', link: 'ru/README' },
+			{ text: 'Привет 👋', link: SITE.base + 'ru/README' },
 		],
 		'Друзьям': [
-			{ text: 'Привет 👋', link: 'ru/README' },
+			{ text: 'Привет 👋', link: SITE.base + 'ru/README' },
 		],
 	},
 };
