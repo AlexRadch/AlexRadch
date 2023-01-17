@@ -7,7 +7,7 @@ I'm a .NET developer, freelancer, and video blogger. I'm creating **software eng
 [![YouTube](https://img.shields.io/youtube/channel/views/UCodTcqPf01ZCPRMJXhVdHiA?style=social)](https://www.youtube.com/channel/UCodTcqPf01ZCPRMJXhVdHiA)
 [![GitHub](https://img.shields.io/github/followers/AlexRadch?style=social)](https://github.com/AlexRadch)
 [![Twitter](https://img.shields.io/twitter/follow/AlexRadc?style=social)](https://twitter.com/AlexRadc)
-[![Codewars](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)](https://www.codewars.com/users/AlexRadch)
+[![Codewars](https://www.codewars.com/users/AlexRadch/badges/micro?theme=light)](https://www.codewars.com/r/rHzY6w)
 
 ## GitHub
 
